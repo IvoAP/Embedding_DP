@@ -48,7 +48,15 @@ uv sync
 
 ## Data
 
-Embeddings are not versioned. Place each VGAE output folder in `embeddings/`:
+The `embeddings/` folder is not part of the repository (it is listed in `.gitignore`), so you
+need to create it yourself in the project root and copy the VGAE outputs into it:
+
+```bash
+mkdir embeddings
+```
+
+Each task looks for a subfolder whose name starts with its source prefix followed by `__`
+(e.g. `Musae-Github__...`; see [Tasks](#tasks)). The expected layout is:
 
 ```
 embeddings/
