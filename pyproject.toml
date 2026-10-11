@@ -1,0 +1,24 @@
+[project]
+name = "embedding-dp"
+version = "0.1.0"
+description = "Laplace DP on VGAE embeddings + classifier benchmark tuned with Optuna"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "optuna",
+    "orjson",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "xgboost",
+]
+
+[project.scripts]
+embedding-dp = "embedding_dp:main"
+embedding-dp-report = "embedding_dp.report:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
